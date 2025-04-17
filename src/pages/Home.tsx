@@ -1,3 +1,5 @@
+import './style.css';
+
 function Home() {
     return <h1>Welcome to Cal-culator 🍽️</h1>;
   }
