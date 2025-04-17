@@ -21,7 +21,8 @@
     "noUncheckedSideEffectImports": true,
 
     /* Vite-specific types */
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }
