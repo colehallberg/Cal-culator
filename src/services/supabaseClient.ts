@@ -20,3 +20,8 @@ export async function registerUser(email: string, password: string) {
   });
   return { data, error };
 }
+
+export async function logoutUser(){
+  await supabase.auth.signOut();
+  window.location.href = '/';
+};

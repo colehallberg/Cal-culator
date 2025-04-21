@@ -4,6 +4,8 @@ import openai
 import os
 from dotenv import load_dotenv  # Add this if you're using .env files
 
+# To instantiate backend sever uvicorn src.services.calculator:app --reload --port 8000 in terminal
+
 # Load environment variables
 load_dotenv()  # Add this if you're using .env files
 
@@ -39,7 +41,7 @@ async def calculate_calories(request: Request):
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a nutrition assistant. Given a plain text list of foods eaten by a person, estimate the total calories consumed based on common averages. Respond with ONLY the number of calories. If input does not pertain to food respond with nothing."},
+                {"role": "system", "content": "You are a nutrition assistant. Given a plain text list of foods eaten by a person, estimate the total calories consumed based on common averages. Output only number of calories with no additional explanation. If the input is a general question respond with Invalid Input"},
                 {"role": "user", "content": user_input}
             ],
             max_tokens=50,

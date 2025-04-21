@@ -23,7 +23,7 @@ function Login() {
       alert('Login failed: ' + error.message);
     } else {
       console.log('Logged in:', data);
-      navigate('/homepage'); // Redirect to home page after successful login
+      navigate('/dashboard'); // Redirect to home page after successful login
     }
   };
 

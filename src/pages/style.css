@@ -272,3 +272,63 @@ body {
     font-size: 1.1rem;
   }
 }
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2rem;  /* 👈 slightly lower */
+  left: 2rem;  /* 👈 slightly more to the right */
+  z-index: 200;
+}
+
+
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  position: absolute;
+  top: 60px; /* 👈 under header */
+  left: 2rem;
+  width: 180px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.logout-button:hover {
+  color: #007bff;
+}
+
+
